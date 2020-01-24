@@ -6,12 +6,6 @@
 
 <?php
 
-<<<<<<< HEAD
-$diaporama = 
-
-?>
-
-=======
 $diaporama = get_field("diaporama_posts_projets");
 $etudeDarchi = get_field('etude_darchi');
 $nghi_stephan = get_field('nghi_&_stephan');
@@ -68,4 +62,3 @@ $tissus = get_field("tissus_et_artisanat")
 </ul>
 
 
->>>>>>> ed9083b40ef19308ef1e70cc9fe3cc4a8e8647b3
