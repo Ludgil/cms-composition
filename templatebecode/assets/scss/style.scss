@@ -6,68 +6,74 @@ Author URI:
 Version: alpha
 */
 
-
 @font-face {
-    font-family: "proxima_novabold";
-    src: url('http://localhost/Wordpress/wp-content/themes/templatebecode/assets/fonts/proximanova-bold-webfont.eot');
-    src: url('http://localhost/Wordpress/wp-content/themes/templatebecode/assets/fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('http://localhost/Wordpress/wp-content/themes/templatebecode/assets/fonts/proximanova-bold-webfont.woff2') format('woff2'),
-         url('http://localhost/Wordpress/wp-content/themes/templatebecode/assets/fonts/proximanova-bold-webfont.woff') format('woff'),
-         url('http://localhost/Wordpress/wp-content/themes/templatebecode/assets/fonts/proximanova-bold-webfont.ttf') format('truetype');
+  font-family: "proxima_novabold";
+  src: url("http://localhost/Wordpress/wp-content/themes/templatebecode/assets/fonts/proximanova-bold-webfont.eot");
+  src: url("http://localhost/Wordpress/wp-content/themes/templatebecode/assets/fonts/proximanova-bold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("http://localhost/Wordpress/wp-content/themes/templatebecode/assets/fonts/proximanova-bold-webfont.woff2")
+      format("woff2"),
+    url("http://localhost/Wordpress/wp-content/themes/templatebecode/assets/fonts/proximanova-bold-webfont.woff")
+      format("woff"),
+    url("http://localhost/Wordpress/wp-content/themes/templatebecode/assets/fonts/proximanova-bold-webfont.ttf")
+      format("truetype");
 }
 
-
-
-
-
-
 @font-face {
-    font-family: 'proxima_novalight';
-    src: url('/../../../../assets/fonts/proximanova-light-webfont.eot');
-    src: url('/../../../../assets/fonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/../../../../assets/fonts/proximanova-light-webfont.woff2') format('woff2'),
-         url('/../../../../assets/fonts/proximanova-light-webfont.woff') format('woff'),
-         url('/../../../../assets/fonts/proximanova-light-webfont.ttf') format('truetype');
-
+  font-family: "proxima_novalight";
+  src: url("/../../../../assets/fonts/proximanova-light-webfont.eot");
+  src: url("/../../../../assets/fonts/proximanova-light-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("/../../../../assets/fonts/proximanova-light-webfont.woff2")
+      format("woff2"),
+    url("/../../../../assets/fonts/proximanova-light-webfont.woff")
+      format("woff"),
+    url("/../../../../assets/fonts/proximanova-light-webfont.ttf")
+      format("truetype");
 }
 
-
-
-
 @font-face {
-    font-family: 'proxima_novaregular';
-    src: url('/../../../../assets/fonts/proximanova-regular-webfont.eot');
-    src: url('/../../../../assets/fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/../../../../assets/fonts/proximanova-regular-webfont.woff2') format('woff2'),
-         url('/../../../../assets/fonts/proximanova-regular-webfont.woff') format('woff'),
-         url('/../../../../assets/fonts/proximanova-regular-webfont.ttf') format('truetype');
-
+  font-family: "proxima_novaregular";
+  src: url("/../../../../assets/fonts/proximanova-regular-webfont.eot");
+  src: url("/../../../../assets/fonts/proximanova-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("/../../../../assets/fonts/proximanova-regular-webfont.woff2")
+      format("woff2"),
+    url("/../../../../assets/fonts/proximanova-regular-webfont.woff")
+      format("woff"),
+    url("/../../../../assets/fonts/proximanova-regular-webfont.ttf")
+      format("truetype");
 }
-
-
 
 .menu {
-    position: fixed;
-    top: 0px;
+  position: fixed;
+  top: 0px;
 }
 
 .admin-bar .menu {
-    top: 32px; /* on prend en compte le décalage */
+  top: 32px; /* on prend en compte le décalage */
 }
 
-body{
-    background-color:white;
-    margin: 0 auto;
+body {
+  background-color: white;
+  margin: 0 auto;
 }
 
-header{
-    background-color: white;
-    width: 100%;
-    height: 125px;
+header {
+  background-color: white;
+  width: 100%;
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  #container-nav {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    #container-nav{
+    justify-content: space-between;
+    width: 80%;
+    .navigation {
+      display: flex;
+      ul {
+        margin: 0;
         display: flex;
         justify-content: space-between;
         width: 80%;
@@ -104,9 +110,33 @@ header{
                     }
                 }
             }
+        align-items: center;
+        li:first-child {
+          a:first-child {
+            background: url("http://localhost/wordpress/wp-content/themes/cms-composition/templatebecode/assets/svg/home-minimal.svg")
+              0 0 no-repeat;
+            display: block;
+            width: 20px;
+            height: 20px;
+            text-indent: -99999px;
+            overflow: hidden;
+          }
         }
+        li {
+          list-style: none;
+
+          a {
+            text-decoration: none;
+            margin-right: 40px;
+            color: black;
+            font-family: "proxima_novabold", sans-serif;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+          }
+        }
+      }
     }
-    
+  }
 }
 
 #bandeau{
@@ -311,4 +341,23 @@ header{
     a{
         text-align: left;
     }
+}
+#bandeau {
+  display: flex;
+  width: 100%;
+  .left-side {
+    width: 50%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .right-side {
+    width: 50%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
 }
