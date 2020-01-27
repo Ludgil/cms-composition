@@ -6,14 +6,16 @@ Author URI:
 Version: alpha
 */
 
+$novaLight : "proxima_novalight";
+$novaBold : "proxima_novabold";
 
 @font-face {
     font-family: "proxima_novabold";
-    src: url('http://localhost/Wordpress/wp-content/themes/templatebecode/assets/fonts/proximanova-bold-webfont.eot');
-    src: url('http://localhost/Wordpress/wp-content/themes/templatebecode/assets/fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('http://localhost/Wordpress/wp-content/themes/templatebecode/assets/fonts/proximanova-bold-webfont.woff2') format('woff2'),
-         url('http://localhost/Wordpress/wp-content/themes/templatebecode/assets/fonts/proximanova-bold-webfont.woff') format('woff'),
-         url('http://localhost/Wordpress/wp-content/themes/templatebecode/assets/fonts/proximanova-bold-webfont.ttf') format('truetype');
+    src: url('http://localhost/Wordpress/wp-content/themes/cms-composition/templatebecode/assets/fonts/proximanova-bold-webfont.eot');
+    src: url('http://localhost/Wordpress/wp-content/themes/cms-composition/templatebecode/assets/fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://localhost/Wordpress/wp-content/themes/cms-composition/templatebecode/assets/fonts/proximanova-bold-webfont.woff2') format('woff2'),
+         url('http://localhost/Wordpress/wp-content/themes/cms-composition/templatebecode/assets/fonts/proximanova-bold-webfont.woff') format('woff'),
+         url('http://localhost/Wordpress/wp-content/themes/cms-composition/templatebecode/assets/fonts/proximanova-bold-webfont.ttf') format('truetype');
 }
 
 
@@ -23,11 +25,11 @@ Version: alpha
 
 @font-face {
     font-family: 'proxima_novalight';
-    src: url('/../../../../assets/fonts/proximanova-light-webfont.eot');
-    src: url('/../../../../assets/fonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/../../../../assets/fonts/proximanova-light-webfont.woff2') format('woff2'),
-         url('/../../../../assets/fonts/proximanova-light-webfont.woff') format('woff'),
-         url('/../../../../assets/fonts/proximanova-light-webfont.ttf') format('truetype');
+    src: url('http://localhost/Wordpress/wp-content/themes/cms-composition/templatebecode/assets/fonts/proximanova-light-webfont.eot');
+    src: url('http://localhost/Wordpress/wp-content/themes/cms-composition/templatebecode/assets/fonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://localhost/Wordpress/wp-content/themes/cms-composition/templatebecode/assets/fonts/proximanova-light-webfont.woff2') format('woff2'),
+         url('http://localhost/Wordpress/wp-content/themes/cms-composition/templatebecode/assets/fonts/proximanova-light-webfont.woff') format('woff'),
+         url('http://localhost/Wordpress/wp-content/themes/cms-composition/templatebecode/assets/fonts/proximanova-light-webfont.ttf') format('truetype');
 
 }
 
@@ -36,11 +38,11 @@ Version: alpha
 
 @font-face {
     font-family: 'proxima_novaregular';
-    src: url('/../../../../assets/fonts/proximanova-regular-webfont.eot');
-    src: url('/../../../../assets/fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/../../../../assets/fonts/proximanova-regular-webfont.woff2') format('woff2'),
-         url('/../../../../assets/fonts/proximanova-regular-webfont.woff') format('woff'),
-         url('/../../../../assets/fonts/proximanova-regular-webfont.ttf') format('truetype');
+    src: url('http://localhost/Wordpress/wp-content/themes/cms-composition/templatebecode/assets/fonts/proximanova-regular-webfont.eot');
+    src: url('http://localhost/Wordpress/wp-content/themes/cms-composition/templatebecode/assets/fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://localhost/Wordpress/wp-content/themes/cms-composition/templatebecode/assets/fonts/proximanova-regular-webfont.woff2') format('woff2'),
+         url('http://localhost/Wordpress/wp-content/themes/cms-composition/templatebecode/assets/fonts/proximanova-regular-webfont.woff') format('woff'),
+         url('http://localhost/Wordpress/wp-content/themes/cms-composition/templatebecode/assets/fonts/proximanova-regular-webfont.ttf') format('truetype');
 
 }
 
@@ -89,13 +91,12 @@ header{
                 }
                 li{
                     list-style: none;
-                   
                     a{
                         text-decoration: none;
                         margin-right: 40px;
                         color: black;
-                        font-family: "proxima_novabold", sans-serif;
-                        font-size: 1.2rem;
+                        font-family: $novaBold, sans-serif;
+                        font-size: 14px;
                         text-transform: uppercase;
                         padding-bottom: 5px;
                         &:hover{
@@ -124,25 +125,51 @@ header{
         .box-left{
             display: flex;
             justify-content: center;
-            align-items: center;
+            flex-direction: column;
             position: absolute;
+            padding-left: 10%;
+            box-sizing: border-box;
             height: 125px;
             width: 70%;
             background-color:white;
             top:90%;
             left: 10%;
             box-shadow: 1px 1px 10px 1px rgba(112,112,112,0.5);
-        }
-        p{
-            color: black;
-        }
-        a{
-            background-color: black;
-            border-radius: 50%;
-            text-decoration: none;
-            padding: 15px;
-            position: absolute;
-            right: -4%;
+            transition: ease 0.6s;
+            p{
+                color: black;
+                font-family: $novaLight, sans-serif;
+                font-size: 16px;
+                line-height: 1.6rem;
+            }
+            a{
+                background-color: black;
+                border-radius: 50%;
+                text-decoration: none;
+                padding: 15px;
+                position: absolute;
+                right: -4%;
+                font-family: $novaBold, sans-serif;
+                font-size: 18px;
+            }
+            h2{
+                font-family: $novaLight, sans-serif;
+                font-size: 24px;
+            }
+            .hover-content{
+                display: none;
+            }
+            &:hover{
+                height: 250px;
+                h2{
+                    display: none;
+                }
+                .hover-content{
+                    display: inline;
+                }
+    
+    
+            }
         }
     }
     .right-side{
@@ -152,15 +179,16 @@ header{
         img{
             width:100%;
             height: auto;
-            
         }
         .box-right{
             display: flex;
             justify-content: center;
-            align-items: center;
+            flex-direction: column;
             position: absolute;
             height: 125px;
             width: 70%;
+            padding-left: 10%;
+            box-sizing: border-box;
             background-color:black;
             top:90%;
             left: 10%;
@@ -168,6 +196,9 @@ header{
             transition: ease 0.6s;
             p{
                 color: white;
+                font-family: $novaLight, sans-serif;
+                font-size: 16px;
+                line-height: 1.6rem;
             }
             a{
                 background-color: white;
@@ -177,8 +208,25 @@ header{
                 position: absolute;
                 right: -4%;
             }
+            h2{
+                color:white;
+                font-family: $novaLight, sans-serif;
+                font-size: 24px;
+            }
+            .hover-content{
+                display: none;
+                transition: ease 1.5s;
+                opacity: 0;
+            }
             &:hover{
                 height: 250px;
+                h2{
+                    display: none;
+                }
+                .hover-content{
+                    display: inline;
+                    opacity: 1;
+                }
             }
             
         }
@@ -209,22 +257,40 @@ header{
             }
             .title-intro{
                position: relative;
-               width: 100%;
+               width: 70%;
                height: 325px;
                margin-top: 15%;
                display: flex;
                align-items: center;
                 p{
                     color: white;
-                    width: 70%;
+                    font-family: $novaLight, sans-serif;
+                    font-size: 24px;
+                    line-height: 2rem;
                 }
             }
             .content-intro{
                position: relative;
                margin-top: 5%;
-               p{
+               width: 70%;
+               h2{
+                   font-family: $novaLight, sans-serif;
+                   font-size: 24px;
                    color: black;
                }
+               p{
+                   color: black;
+                   font-family: $novaLight, sans-serif;
+                   font-size: 16px;
+                   line-height: 1.6rem;
+               }
+               a{
+                color: black;
+                font-family: $novaBold, sans-serif;
+                font-size: 18px;
+                text-decoration: none;
+               }
+            
             }
         }
         .right-side{
@@ -258,7 +324,7 @@ header{
     }
     .milieu-content{
         position: relative;
-        width: 50%;
+        width: 30%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -269,11 +335,16 @@ header{
           align-self: flex-start;
           margin-bottom: 5%;
         }
-        h2{
-
+        p{
+            font-family: $novaBold, sans-serif;
+            font-size: 32px;
+            color: black;
         }
         a{
-            
+            font-family: $novaBold, sans-serif;
+            font-size: 22px;
+            color: black;
+            text-decoration: none;
         }
 
     }
@@ -292,23 +363,30 @@ header{
         }
     }
     .right-side{
-        width: 45%;
+        width: 30%;
         padding-right: 5%;
         padding-left: 5%;
         box-sizing: border-box;
         display: flex;
-        align-items: center;
         justify-content: center;
         flex-direction: column;
     }
-    h3{
-        text-align: left;
+    h2{
+        font-family: $novaBold, sans-serif;
+        font-size: 22px;
     }
     p{
-        margin-bottom: 10%;
+        margin-bottom: 5%;
         text-align: left;
+        font-size: 16px;
+        line-height: 1.6rem;
     }
     a{
+
+        font-family: $novaBold, sans-serif;
         text-align: left;
+        font-size: 18px;
+        color: black;
+        text-decoration: none;
     }
 }
